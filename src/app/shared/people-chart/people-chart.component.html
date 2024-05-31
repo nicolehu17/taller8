@@ -1,0 +1,27 @@
+<h2>Lista de Personas</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sexo</th>
+            <th>Carrera</th>
+            <th>Salario</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(people of people ; track people.person){
+            <tr>
+                <td>{{people.person[0]}}</td>
+                <td>{{people.person[1]}}</td>
+                <td>{{people.person[2]}}</td>
+                <td>{{people.person[3]}}</td>
+                <td>{{people.person[4]}}</td>
+                <td>{{people.person[5]}}</td>
+            </tr>
+        }@empty{
+            Empty
+        }
+    </tbody>
+</table>
