@@ -1,0 +1,73 @@
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="mb-3">Tu nuevo hogar está aquí.</h3>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">VILANOVA</h4>
+                                            <p class="card-text">Km 13 Via a Salitre</p>
+                                            <h5 class="card-text">Modelo Manresa</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">VILANOVA</h4>
+                                            <p class="card-text">Km 13 Via a Salitre</p>
+                                            <h5 class="card-text">Modelo Arenys</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="card-title">BONAVILA</h4>
+                                            <p class="card-text">Km 15 Via a Salitre</p>
+                                            <h5 class="card-text">Modelo B93</h5>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>Nuestros proyectos</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Ubicacion</th>
+                            <th>M2</th>
+                            <th>Precio</th>
+                            <th>N Habitaciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for(proyecto of proyecto ; track proyecto.proyecto){
+                            <tr>
+                                <td>{{proyecto.proyecto[0]}}</td>
+                                <td>{{proyecto.proyecto[1]}}</td>
+                                <td>{{proyecto.proyecto[2]}}</td>
+                                <td>{{proyecto.proyecto[3]}}</td>
+                            </tr>
+                        }@empty{
+                            Empty
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

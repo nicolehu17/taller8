@@ -1,59 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
-<body>
-    <div class="container mt-5">
-        <h1>Aplicar trabajo</h1>
-        <form id="registrationForm" class="mb-4">
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="lastname">Apellido:</label>
-                <input type="text" class="form-control" id="lastname" name="lastname" required>
-            </div>
-            <div class="form-group">
-                <label>Sexo:</label><br>
-                <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="male" name="sex" value="Masculino" required>
-                    <label class="form-check-label" for="male">Masculino</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" id="female" name="sex" value="Femenino">
-                    <label class="form-check-label" for="female">Femenino</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="name">Carrera:</label>
-                <input type="text" class="form-control" id="carrera" name="carrera" required>
-            </div>
-            <div class="form-group">
-                <label for="salario">Salario deseado:</label>
-                <select class="form-control" id="salario" name="salario" required>
-                    <option value="500">500-</option>
-                    <option value="501">501-1000</option>
-                    <option value="1001">1001-1500</option>
-                    <option value="1501">1501-2000</option>
-                    <option value="2001">2001+</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="age">Edad:</label>
-                <input type="number" class="form-control" id="age" name="age" required>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="addPerson()">Agregar</button>
-        </form>
 
-        <app-people-chart></app-people-chart>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" routerLinkActive="active" routerLink="/Home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="/About">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" routerLink="/Contacto">Agenda tu cita</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <app-contacto></app-contacto>
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <router-outlet></router-outlet>
+    <footer>
+        <div class="p-3 mb-2 bg-primary-subtle text-primary-emphasis">.
+            <br>
+            <div class="container">
+                <a class="navbar-brand" href="https://www.facebook.com/INMOVILAec">
+                </a>
+                <a class="navbar-brand" href="https://www.instagram.com/inmovila/">
+                </a>
+                <a class="navbar-brand" href="https://www.tiktok.com/@inmovilaec">
+                </a>
+            </div>
+            Copyright &copy; Inmovila. Todos los derechos reservados.
+        </div>
+    </footer>
 </body>
+
 </html>
